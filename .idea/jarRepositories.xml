@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="inventory-snapshots" />
+      <option name="name" value="eu.repository.roche.com-snapshots" />
+      <option name="url" value="https://eu.repository.roche.com/artifactory/inventory-maven-dev" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="inventory-releases" />
+      <option name="name" value="eu.repository.roche.com-releases" />
+      <option name="url" value="https://eu.repository.roche.com/artifactory/inventory-maven-prod" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="common-cache-maven-all-v" />
+      <option name="url" value="https://eu.repository.roche.com/artifactory/common-cache-maven-all-v" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="snapshots" />
+      <option name="name" value="common-cache-maven-all-v" />
+      <option name="url" value="https://eu.repository.roche.com/artifactory/common-cache-maven-all-v" />
+    </remote-repository>
+  </component>
+</project>

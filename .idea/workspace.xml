@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ff2286d3-cbeb-4ef8-8e39-0489393bd7b2" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/vegadah/Documents/harsh-tech/MAY26-API-Automation" value="3EvTjBZwJtes44wwJWkONXvw4VB" />
+      <entry key="_C:/Users/vegadah/Documents/harsh-tech/MAY26-API-Automation - Copy" value="3FCRygOM1Akc32yCklWVcCIrTfo" />
+    </persistenceIdMap>
+  </component>
+  <component name="CopilotUserSelectedChatMode">
+    <option name="chatModeId" value="Agent" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="3EvTjBZwJtes44wwJWkONXvw4VB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.A.executor": "Run",
+    "Application.DataUtils.executor": "Run",
+    "Application.ExcelOperations.executor": "Run",
+    "Application.FileConstant.executor": "Run",
+    "Application.MockGoogleOAuthFlow.executor": "Debug",
+    "Application.POJOExmaple.executor": "Run",
+    "Application.PropertyReader.executor": "Run",
+    "Application.Q1.executor": "Run",
+    "Application.UserLoginRequestPayload.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.C:/Users/vegadah/Documents/harsh-tech/MAY26-API-Automation - Copy/testng.xml.executor": "Run",
+    "TestNG.CouponsTest.executor": "Run",
+    "TestNG.JSONPathTest.executor": "Run",
+    "TestNG.JSONPathTest.m1 (1).executor": "Run",
+    "TestNG.JSONPathTest.m1 (2).executor": "Run",
+    "TestNG.JSONPathTest.m1 (3).executor": "Run",
+    "TestNG.JSONPathTest.m1 (4).executor": "Run",
+    "TestNG.JSONPathTest.m1.executor": "Run",
+    "TestNG.MenuAddingToRestaurantTest.addMenuToRestaurant (1).executor": "Run",
+    "TestNG.MenuAddingToRestaurantTest.addMenuToRestaurant (2).executor": "Run",
+    "TestNG.MenuAddingToRestaurantTest.addMenuToRestaurant (3).executor": "Run",
+    "TestNG.MenuAddingToRestaurantTest.addMenuToRestaurant.executor": "Run",
+    "TestNG.MenuAddingToRestaurantTest.executor": "Run",
+    "TestNG.MultiProfileTest.TC_API_E2E_MP_01.executor": "Run",
+    "TestNG.MultiProfileTestCase.TC_API_E2E_MP_01 (1).executor": "Debug",
+    "TestNG.MultiProfileTestCase.TC_API_E2E_MP_01.executor": "Run",
+    "TestNG.MultiProfileTestCase.executor": "Run",
+    "TestNG.OAuthExample.m1 (1).executor": "Debug",
+    "TestNG.OAuthExample.m1.executor": "Debug",
+    "TestNG.OAuthFoodApiTest.executor": "Run",
+    "TestNG.OAuthFoodApiTest.oauthLoginAndCallFoodApi.executor": "Debug",
+    "TestNG.OrderPlaceAsUserTest.placeOrderAsUser.executor": "Run",
+    "TestNG.OrderPlaceAsUserTest.placeOrderWithOutOfStockItem.executor": "Run",
+    "TestNG.OrderPlaceTest (1).executor": "Debug",
+    "TestNG.OrderPlaceTest (2).executor": "Debug",
+    "TestNG.OrderPlaceTest (3).executor": "Debug",
+    "TestNG.OrderPlaceTest (4).executor": "Debug",
+    "TestNG.OrderPlaceTest.displayAllOrdersTest.executor": "Run",
+    "TestNG.OrderPlaceTest.executor": "Debug",
+    "TestNG.OrderPlaceTest.placeOrderAsUser (1).executor": "Debug",
+    "TestNG.OrderPlaceTest.placeOrderAsUser.executor": "Run",
+    "TestNG.OrderPlaceTest.retrieveAndIterateOrdersTest.executor": "Run",
+    "TestNG.OrderPlaceTest.verifySortingOfTable (1).executor": "Run",
+    "TestNG.OrderPlaceTest.verifySortingOfTable (2).executor": "Run",
+    "TestNG.OrderPlaceTest.verifySortingOfTable (3).executor": "Debug",
+    "TestNG.OrderPlaceTest.verifySortingOfTable.executor": "Debug",
+    "TestNG.OrderPlaceTestAsUser.executor": "Run",
+    "TestNG.OrderPlaceTestAsUser.placeOrderAsUser (1).executor": "Run",
+    "TestNG.OrderPlaceTestAsUser.placeOrderAsUser (2).executor": "Run",
+    "TestNG.OrderPlaceTestAsUser.placeOrderAsUser (3).executor": "Run",
+    "TestNG.OrderPlaceTestAsUser.placeOrderAsUser (4).executor": "Run",
+    "TestNG.OrderPlaceTestAsUser.placeOrderAsUser (5).executor": "Run",
+    "TestNG.OrderPlaceTestAsUser.placeOrderAsUser.executor": "Run",
+    "TestNG.OrderTest.executor": "Run",
+    "TestNG.OrderTest.orderResponseTest (1).executor": "Run",
+    "TestNG.OrderTest.orderResponseTest (2).executor": "Run",
+    "TestNG.OrderTest.orderResponseTest (3).executor": "Run",
+    "TestNG.OrderTest.orderResponseTest (4).executor": "Debug",
+    "TestNG.OrderTest.orderResponseTest (5).executor": "Run",
+    "TestNG.OrderTest.orderResponseTest.executor": "Run",
+    "TestNG.RefundTest.executor": "Run",
+    "TestNG.RefundTest.refundTestApproved (1).executor": "Run",
+    "TestNG.RefundTest.refundTestApproved (2).executor": "Run",
+    "TestNG.RefundTest.refundTestApproved.executor": "Run",
+    "TestNG.RestaurantTest.TC_API_ORD_05.executor": "Debug",
+    "TestNG.VerifyStudentsDetailsTest.verifyStudentsDetails (1).executor": "Run",
+    "TestNG.VerifyStudentsDetailsTest.verifyStudentsDetails (2).executor": "Run",
+    "TestNG.VerifyStudentsDetailsTest.verifyStudentsDetails (3).executor": "Run",
+    "TestNG.VerifyStudentsDetailsTest.verifyStudentsDetails (4).executor": "Run",
+    "TestNG.VerifyStudentsDetailsTest.verifyStudentsDetails (5).executor": "Run",
+    "TestNG.VerifyStudentsDetailsTest.verifyStudentsDetails.executor": "Run",
+    "TestNG.VerifyStudentsDetailsTest.verifyStudentsDetailsNotDisplayedForWrongStudentID (1).executor": "Run",
+    "TestNG.VerifyStudentsDetailsTest.verifyStudentsDetailsNotDisplayedForWrongStudentID.executor": "Run",
+    "TestNG.scripts.MultiProfileTestCase and 3 more.executor": "Run",
+    "TestNG.scripts.OrderPlaceTest and 2 more.executor": "Run",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/vegadah/Documents/harsh-tech/MAY26-API-Automation - Copy/src/test/resources",
+    "settings.build.tools.auto.reload": "ALL",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vegadah\Documents\harsh-tech\MAY26-API-Automation - Copy\src\test\resources" />
+      <recent name="C:\Users\vegadah\Documents\harsh-tech\MAY26-API-Automation - Copy" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MockGoogleOAuthFlow">
+    <configuration name="MockGoogleOAuthFlow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="scripts.MockGoogleOAuthFlow" />
+      <module name="MAY26-API-Automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="scripts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OAuthFoodApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MAY26-API-Automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="scripts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="scripts" />
+      <option name="MAIN_CLASS_NAME" value="scripts.OAuthFoodApiTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OAuthFoodApiTest.oauthLoginAndCallFoodApi" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MAY26-API-Automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="scripts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="scripts" />
+      <option name="MAIN_CLASS_NAME" value="scripts.OAuthFoodApiTest" />
+      <option name="METHOD_NAME" value="oauthLoginAndCallFoodApi" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderPlaceTest.placeOrderAsUser (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MAY26-API-Automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="scripts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="scripts" />
+      <option name="MAIN_CLASS_NAME" value="scripts.OrderPlaceTest" />
+      <option name="METHOD_NAME" value="placeOrderAsUser" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderPlaceTest.placeOrderAsUser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MAY26-API-Automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="scripts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="scripts" />
+      <option name="MAIN_CLASS_NAME" value="scripts.OrderPlaceTest" />
+      <option name="METHOD_NAME" value="placeOrderAsUser" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MockGoogleOAuthFlow" />
+        <item itemvalue="TestNG.OAuthFoodApiTest.oauthLoginAndCallFoodApi" />
+        <item itemvalue="TestNG.OAuthFoodApiTest" />
+        <item itemvalue="TestNG.OrderPlaceTest.placeOrderAsUser" />
+        <item itemvalue="TestNG.OrderPlaceTest.placeOrderAsUser (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ff2286d3-cbeb-4ef8-8e39-0489393bd7b2" name="Changes" comment="" />
+      <created>1781058176635</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1781058176635</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/standAlone/OrderPlaceAsUserTest.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/scripts/RestaurantTest.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/scripts/MultiProfileTest.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/scripts/OrderPlaceTest.java</url>
+          <line>200</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/standAlone/OAuthExample.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/standAlone/OAuthExample.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/scripts/MockGoogleOAuthFlow.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/scripts/MockGoogleOAuthFlow.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
