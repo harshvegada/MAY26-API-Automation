@@ -1,7 +1,14 @@
 package entity.responsePayload.orderResponsePOJO;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
 
+@Builder
+@Getter
+@Setter
 public class Datum {
     public String orderNumber;
     public String date;
