@@ -1,0 +1,114 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "orderNumber": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    },
+    "restaurantId": {
+      "type": "string"
+    },
+    "restaurantName": {
+      "type": "string"
+    },
+    "ownerEmail": {
+      "type": "string"
+    },
+    "locality": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "itemId": {
+            "type": "string"
+          },
+          "itemName": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "price": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "itemId",
+          "itemName",
+          "category",
+          "quantity",
+          "price"
+        ]
+      }
+    },
+    "deliveryAddress": {
+      "type": "string"
+    },
+    "contactMobile": {
+      "type": "string"
+    },
+    "subtotal": {
+      "type": "number"
+    },
+    "couponApplied": {},
+    "discount": {
+      "type": "number"
+    },
+    "totalAmount": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string"
+    },
+    "accelerated": {
+      "type": "boolean"
+    },
+    "timeRemaining": {
+      "type": "string"
+    },
+    "rating": {},
+    "ratingComment": {},
+    "ratedAt": {},
+    "refund": {}
+  },
+  "required": [
+    "orderNumber",
+    "date",
+    "userId",
+    "username",
+    "restaurantId",
+    "restaurantName",
+    "ownerEmail",
+    "locality",
+    "items",
+    "deliveryAddress",
+    "contactMobile",
+    "subtotal",
+    "couponApplied",
+    "discount",
+    "totalAmount",
+    "status",
+    "accelerated",
+    "timeRemaining",
+    "rating",
+    "ratingComment",
+    "ratedAt",
+    "refund"
+  ]
+}

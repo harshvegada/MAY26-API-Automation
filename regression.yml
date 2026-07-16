@@ -1,0 +1,84 @@
+name: Regression Suite
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: 'Chose the environment to run your suite or test cases'
+        options:
+          - 'qa'
+          - 'stage'
+        default: 'qa'
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: Run Regression scenarios
+        continue-on-error: true
+        run: |
+          echo "Running the following test cases:"
+          echo "${{ github.event.inputs.test_cases }}"
+          mvn clean test -Dgroups="regression" -Denvironment=${{ github.event.inputs.environment }}
+
+      - name: Checkout GitHub Pages branch
+        uses: actions/checkout@v4
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Generate Allure Report
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        with:
+          allure_results: allure-results
+          allure_report: allure-report
+          gh_pages: gh-pages
+          allure_history: allure-history
+          retention_period: 5
+
+      - name: Deploy Allure report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          personal_token: ${{ secrets.GH_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history
+
+      - name: Send Email
+        uses: hilarion5/send-mail@v1
+        with:
+          smtp-server: smtp.gmail.com
+          smtp-port: 465
+          smtp-secure: true
+          from-email: harshhpatel07@gmail.com
+          to-email: harshvegada1997@gmail.com,write2technocredits@gmail.com
+          username: harshhpatel07@gmail.com
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: Automation Test Execution for ${{ github.repository }}
+          body: |
+            Hi everyone,
+            Please find  the latest execution of automation from below link:
+  
+            The Allure report for the latest run in ${{ github.repository }} is available at:
+            https://harshvegada.github.io/MAY25_HRM_API_BDD/${{ github.run_number }}
+
+            Thanks & Regards
+            TechnoCredits

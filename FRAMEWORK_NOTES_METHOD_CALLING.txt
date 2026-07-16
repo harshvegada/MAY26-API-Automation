@@ -1,0 +1,134 @@
+API AUTOMATION FRAMEWORK NOTES
+================================
+
+Project Type
+- Java + Maven + TestNG + RestAssured based API automation framework.
+- Test scripts call service-layer methods, which internally build request specs and execute HTTP calls.
+
+High-Level Framework Design
+1) Test Layer (`src/test/java/scripts`)
+   - Contains business test scenarios.
+   - Example files: `OrderPlaceTest.java`, `RefundTest.java`.
+   - Tests mostly do: login -> call service methods -> assert status/body.
+
+2) Service Layer (`src/main/java/services`)
+   - Encapsulates API operations by domain.
+   - `LoginServices`: profile based login/token setup.
+   - `OrderServices`: place order, fetch orders, sorting/query APIs, refund APIs.
+   - `RestaurantServices`: fetch restaurant/item IDs for dynamic order payload.
+   - `WalletServices`: wallet balance read API.
+
+3) Core HTTP Layer (`src/main/java/base/APIControlActions.java`)
+   - Common low-level HTTP methods:
+     - `executePostRequest(endPoint, payload)`
+     - `executeGetRequest(endPoint)`
+     - `executePutRequest(endPoint, payload)`
+   - Request setup helpers:
+     - `setHeaders(...)`, `setQueryParam(...)`, `setQueryParams(...)`, `setBody(...)`
+     - `setToken(String token)` stores token globally
+     - `setToken()` injects Authorization header using stored token
+
+4) Constants Layer (`src/main/java/constants`)
+   - `APIEndPoints`: endpoint strings (`/orders`, `/refund`).
+   - `StatusCode`: expected status constants (201/200).
+
+5) Payload/Utility Layer
+   - Request payload POJOs under `entity.requestPayload...`
+   - Response POJOs under `entity.responsePayload...`
+   - `ObjectToJsonString`: POJO -> JSON conversion.
+   - `DataUtils`: dynamic test data (address/mobile).
+
+
+How Method Calling Flows (Actual Pattern)
+=========================================
+
+Generic Execution Chain
+- Test method
+  -> service method (Order/Wallet/Restaurant/Login)
+  -> `setHeaders(commonHeaders())`
+  -> optional token/query/body setup
+  -> `executeXXXRequest(...)`
+  -> RestAssured sends API call
+  -> Response returned to test for assertions
+
+Token and Header Flow
+- `CommonServices.generateTokenFor(profile)` picks profile:
+  - customer -> `/auth/login` with customer credentials
+  - owner -> `/auth/login` with owner credentials
+- Extracted token saved in static `authToken`.
+- Whenever `setHeaders(...)` is called and token exists, Authorization header is auto-added.
+
+
+Detailed Method Calling Examples
+================================
+
+A) Place Order (`OrderPlaceTest.placeOrderAsUser`)
+1. `loginServices.generateTokenFor("customer")`
+2. `orderServices.placeOrder("Balance Brew Cafe", "Cold Brew Coffee", 2)`
+   - `RestaurantServices.getRestaurantIdByName(...)`
+   - `RestaurantServices.getItemIDFromRestaurant(...)`
+   - Save current customer token
+   - Switch to owner token and update stock using PUT
+   - Restore customer token
+   - Build order payload (restaurantId, itemId, quantity, address, mobile, paymentMethod)
+   - POST `/orders`
+3. Test validates status/body and verifies order number exists in all orders list.
+
+B) Refund Approved (`RefundTest.refundTestApproved`)
+1. Login as customer.
+2. Read wallet before order: `walletServices.getLatestTotalWalletAmt()` -> GET `/wallet`.
+3. Place order via `orderServices.placeOrder(...)`.
+4. Read wallet after order and validate deduction.
+5. Init refund: `orderServices.initRefundForOrder(orderNumber)` -> PUT `/orders/{orderNumber}/refund` with action=request.
+6. Login as owner.
+7. Approve refund: `orderServices.approvedRefundFor(orderNumber, note)` -> PUT `/orders/{orderNumber}/refund` with action=approve.
+8. Validate wallet math in test.
+
+C) Refund Rejected (`RefundTest.refundTestRejected`)
+1. Same initial flow as approved case until refund init.
+2. Login as owner.
+3. Call `orderServices.rejectRefundFor(orderNumber, note)`.
+4. Validate wallet not equal before/after order amount snapshot.
+
+
+Important Reuse Methods by Class
+================================
+
+`CommonServices`
+- `generateTokenFor(String profile)`
+- `commonHeaders()`
+
+`OrderServices`
+- `placeOrder(String restaurantName, String menuName, int qnt)`
+- `getAllOrders()`
+- `getAllOrderNumber()`
+- `getAllRestaurantNames()`
+- `getRecordForColumnInSorting(String columnName, String sortingType)`
+- `getRecordOfOrderBasedOnQueryParam(Map<String, String> queryParams)`
+- `initRefundForOrder(String orderNumber)`
+- `approvedRefundFor(String orderNumber, String note)`
+- `rejectRefundFor(String orderNumber, String note)`
+
+`RestaurantServices`
+- `getRestaurantIdByName(String restaurantName)`
+- `getItemIDFromRestaurant(String restaurantName, String menuName)`
+
+`WalletServices`
+- `getLatestTotalWalletAmt()`
+
+
+Current Framework Behavior Notes
+================================
+- `authToken` is static and shared, so latest login/token update affects subsequent calls.
+- `requestSpecBuilder` is reset to null after each execute method (POST/GET/PUT).
+- `APIControlActions` currently has empty placeholders for PATCH and DELETE.
+- Many service methods directly call string endpoints; some use constants from `APIEndPoints`.
+
+Observed Improvements You Can Plan Next
+=======================================
+- Complete PATCH/DELETE methods in base layer.
+- Move all endpoint literals to `APIEndPoints`.
+- Improve token handling for parallel test safety (avoid shared static token if parallel runs are enabled).
+- Add negative and role-based authorization tests for refund/order flows.
+- In `rejectRefundFor(...)`, verify payload action value (currently built as approve in code).
+
